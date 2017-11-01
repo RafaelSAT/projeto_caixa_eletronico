@@ -14,7 +14,7 @@ if(ENVIRONMENT == 'desenvolvimento'){
 	
 }else{
 	
-	define("BASE_URL","http://caixa_eletronico.pc/");
+	define("BASE_URL","http://projeto_caixa_eletronico.pc/");
 	$config['dbname'] = 'caixa_eletronico';
 	$config['dbuser'] = 'root';
 	$config['dbpass'] = '';

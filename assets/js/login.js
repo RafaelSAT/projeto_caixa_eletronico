@@ -8,12 +8,12 @@ $(function(){
 		
 		$.ajax({
 			type:'POST',
-			url:'http://caixa_eletronico.pc/models/Login.php',
+			url:'http://projeto_caixa_eletronico.pc/models/Login.php',
 			data:{agencia:agencia, conta:conta, senha:senha},
 			cache:false,
 			success:function(msg){				
 				if(msg == 1){
-					window.location.href = 'http://caixa_eletronico.pc/principal';
+					window.location.href = 'http://projeto_caixa_eletronico.pc/principal';
 				}else{
 					alert("Agencia, conta ou senha inválidos. Tente novamente");
 				}

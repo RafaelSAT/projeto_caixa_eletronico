@@ -6,7 +6,7 @@ function historico(){
 	
 	$.ajax({
 		type:'POST',
-		url:'http://caixa_eletronico.pc/models/Historico.php',
+		url:'http://projeto_caixa_eletronico.pc/models/Historico.php',
 		cache: false,
 		data:{id:id},
 		dataType: "json",		
