@@ -1,0 +1,158 @@
+body{
+	margin:0px;	
+}
+.container-principal{
+	width:100%;
+	padding:10px;
+	margin:auto;
+	box-sizing:border-box;
+}
+.linha1{
+	width:100%;
+	text-align:center;
+}
+.linha2{
+	width:100%;		
+	box-sizing:border-box;
+}
+.barra-info{
+	width:100%;
+	padding:10px;	
+	background-color:black;
+	border:1px solid black;
+	border-radius:5px;
+	color:white;
+	box-sizing:border-box;
+}
+.info{
+	width:20%;
+	margin-left:50px;
+	text-align:center;	
+	font-size:20px;
+	display:inline-block;	
+}
+a{
+	text-decoration:none;
+	color:white;
+}
+button{
+	width:50%;	
+	background-color:#0086c3;	
+	padding:10px;
+	border:1px solid #0086c3;
+	border-radius:5px;	
+}
+button:hover{
+	background-color:#29b6f6;
+	border:1px solid #29b6f6;
+}
+.linha3{
+	width:100%;
+	margin-top:10px;
+	padding-left:35%;
+	box-sizing:border-box;
+}
+input[type=button]{
+	width:20%;
+	margin-left:10px;
+	margin-right:10px;	
+	background-color:#0086c3;	
+	padding:10px;
+	border:1px solid #0086c3;
+	border-radius:5px;	
+	color:white;
+}
+input[type=button]:hover{
+	background-color:#29b6f6;
+	border:1px solid #29b6f6;
+}
+.linha4{
+	text-align:center;
+}
+.linha5{
+	width:100%;	
+}
+.linha5 p{
+	margin-left:25%;
+}
+table{
+	width:50%;
+	margin-left:25%;
+	border:2px solid blue;
+	border-collapse:collapse;	
+}
+tbody{
+	text-align:center;
+}
+table, th, td{
+	border:2px solid blue;
+	padding:20px;
+}
+.modal{
+	display:none;
+	position:fixed;
+    z-index:1;
+    padding-top:100px;    
+    top:0;	
+    width:100%;
+    height:100%;    
+    background-color:rgb(0,0,0);
+    background-color:rgba(0,0,0,0.4);	
+}
+.container-modal{
+	background-color:white;
+	width:30%;
+	margin:auto;	
+	padding:0px;
+	border:2px solid blue;
+	border-radius:5px;	
+}
+.modal-topo, .modal-corpo, .modal-rodape{
+	padding:5px;
+	text-align:center;
+	box-sizing:border-box;
+}
+input[type=text]{
+	border:1px solid black;
+	border-radius:3px;
+	padding:5px;
+}
+input[type=submit]{
+	width:20%;
+	margin-left:10px;
+	margin-right:10px;	
+	background-color:#0086c3;	
+	padding:10px;
+	border:1px solid #0086c3;
+	border-radius:5px;
+	box-sizing:border-box;
+	color:white;
+}
+input[type=submit]:hover{
+	background-color:#29b6f6;
+	border:1px solid #29b6f6;
+}
+.deposito{
+	color:green;
+}
+.saque{
+	color:red;
+}
+.opD{
+	width:10px;
+	height:10px;
+	margin-left:5px;
+	margin-right:5px;
+	border:1px solid black;
+	background-color:green;
+	display:inline-block;
+}
+.opS{
+	width:10px;
+	height:10px;
+	margin-left:5px;
+	margin-right:5px;
+	border:1px solid black;
+	background-color:red;
+	display:inline-block;
+}

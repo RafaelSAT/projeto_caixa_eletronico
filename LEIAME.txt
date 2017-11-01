@@ -1,0 +1,26 @@
+Passos para execução deste projeto no seu computador pessoal.
+
+Este projeto utilizou servidores virtuais com wamp
+
+1º Passo: adicionar a seguinte linha no arquivo etc do windows.
+127.0.0.1 projeto_caixa_eletronico.pc
+
+Geralmente este arquivo fica localizado em C:\Windows\System32\drivers\etc
+Abra este arquivo com permissão de administrador.
+
+2º Passo: adicionar as seguintes linhas no arquivo httpd-vhosts.conf
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@projeto_caixa_eletronico.pc
+    DocumentRoot "c:/wamp/www/projeto_caixa_eletronico"
+    ServerName projeto_caixa_eletronico.pc
+    ServerAlias projeto_caixa_eletronico.pc
+    ErrorLog "logs/projeto_caixa_eletronico.pc-error.log"
+    CustomLog "logs/projeto_caixa_eletronico.pc-access.log" common
+</VirtualHost>
+
+Como eu disse, este projeto utiliza o wamp, e geralmente o caminho deste arquivo é C:\wamp\bin\apache\apache2.4.9\conf\extra
+
+3º Passo: copiar e colar o conteudo do arquivo 'query.sql' no seu banco de dados, para este projeto eu utilizei o HeidiSQL.
+
+4º Passo: digitar o endereço do projeto no seu navegador, exemplo:http://projeto_caixa_eletronico.pc

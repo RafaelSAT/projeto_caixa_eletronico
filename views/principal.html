@@ -1,0 +1,92 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'/>
+		<title>Principal - Banco XYZ</title>
+		<link href='<?php echo BASE_URL?>assets/css/principal.css' rel='stylesheet' type='text/css'/>
+	</head>
+	<body onload='historico()'>		
+		<div class='container-principal'>
+			<div class='linha1'>
+				<h1>Bem vindo <?php echo $titular;?></h1>
+			</div>
+			<div class='linha2'>
+				<div class='barra-info'>					
+					<div class='info'><div><label><strong>Agencia: </strong></label><?php echo $agencia;?></div></div>
+					<div class='info'><div><label><strong>Conta: </strong></label><?php echo $conta;?></div></div>
+					<div class='info'><div><label><strong>Saldo:</strong> R$ </label><?php echo $saldo;?></div></div>
+					<div class='info'><button><a href='<?php echo BASE_URL;?>models/Sair.php'><strong>SAIR</strong></a></button></div>
+				</div>
+			</div>
+			<div class='linha3'>
+				<input type='button' value='Realizar Deposito' id='btnModalDeposito'/>
+				<input type='button' value='Realizar Saque' id='btnModalSaque'/>
+			</div>
+			<hr>
+			<div class='linha4'>
+				<h1>Extrato da sua Conta Bancária</h1>
+			</div>
+			<hr>
+			<div class='linha5'>
+				<p style='display:inline-block;'><strong>Legenda:</strong><div class='opD'></div>Deposito<div class='opS'></div>Saque</p>
+				<table id='tabelaHistorico'>
+					<thead>
+						<tr>
+							<th>Data da Operação</th>
+							<th>Valor</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+				<h2></h2>
+			</div>		
+		</div>
+		<div class='modal' id='modalDeposito'>
+			<div class='container-modal'>
+				<div class='modal-topo'>
+					<h3>Depósito</h3>					
+				</div>
+				<hr>
+				<div class='modal-corpo'>
+					<form id='formDeposito' method='POST' action='operacao'>
+					<label>Valor do depósito: R$</label>
+					<input type='text' name='txtDeposito' maxlength='7' pattern='[0-9.,]{1,}'required/>
+				</div>
+				<hr>
+				<div class='modal-rodape'>
+					<input type='submit' value='Depositar' id='btnDeposito' name='btnDeposito'>
+					<input type='hidden' value='1' name='tipo'/>
+					<input type='hidden' value='<?php echo $_SESSION['id'];?>' name='id' id='idConta'/>
+					<input type='hidden' value='<?php echo $saldo;?>' name='saldo'/>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class='modal' id='modalSaque'>
+			<div class='container-modal'>
+				<div class='modal-topo'>
+					<h3>Saque</h3>					
+				</div>
+				<hr>
+				<div class='modal-corpo'>
+					<form id='formSaque' method='POST' action='operacao'>
+					<label>Valor do saque: R$</label>
+					<input type='text' name='txtSaque' maxlength='7' pattern='[0-9,.]{1,}'required/>
+				</div>
+				<hr>
+				<div class='modal-rodape'>
+					<input type='submit' value='Sacar' id='btnSaque' name='btnSaque'/>
+					<input type='hidden' value='2' name='tipo'/>
+					<input type='hidden' value='<?php echo $_SESSION['id'];?>' name='id'/>
+					<input type='hidden' value='<?php echo $saldo;?>' name='saldo'/>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src='<?php echo BASE_URL;?>assets/js/jquery-3.2.1.min.js' rel='stylesheet' type='text/javascript'></script>
+		<script src='<?php echo BASE_URL;?>assets/js/historico.js' rel='stylesheet' type='text/javascript'></script>
+		<script src='<?php echo BASE_URL;?>assets/js/modal.js' rel='stylesheet' type='text/javascript'></script>
+		<script src='<?php echo BASE_URL;?>assets/js/sair.js' rel='stylesheet' type='text/javascript'></script>
+	</body>
+</html>
